@@ -1,0 +1,15 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#XCode
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/*
+*.xcodeproj/*.pbxuser
+*.xcodeproj/*.perspectivev3
+*.xcodeproj/*.mode1v3
+*.xcodeproj/*.mode2v3
+xcuserdata
+
+#Idea
+*.idea
