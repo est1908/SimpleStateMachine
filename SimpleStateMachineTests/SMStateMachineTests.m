@@ -41,18 +41,20 @@
     STAssertEqualObjects(state1.name, @"state1", @"Invalid state name");
 }
 
-- (void)testAddSimpleTransition
+- (void)testInitial
 {
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"Initial"];
     SMState *state1 = [sm createState:@"state1"];
+    sm.initialState = initial;
     [sm transitionFrom:initial to:state1 forEvent:@"event1"];
 }
 
 - (void)testSimpleSM
 {
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState =  initial;
     SMState *state1 = [sm createState:@"state1"];
     [sm transitionFrom:initial to:state1 forEvent:@"event1"];
     [sm post:@"event1"];
@@ -81,7 +83,8 @@
 {
     _counter = 0;
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
     SMState *state1 = [sm createState:@"state1"];
     [state1 setEntrySelector:@selector(simpleMethod) executeIn:self];
     [sm transitionFrom:initial to:state1 forEvent:@"event1"];
@@ -93,7 +96,8 @@
 {
     _counter = 0;
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
     SMState *state1 = [sm createState:@"state1"];
     SMState *state2 = [sm createState:@"state2"];
     [state1 setExitSelector:@selector(simpleMethod) executeIn:self];
@@ -108,7 +112,8 @@
 {
     _counter = 0;
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
     SMState *state1 = [sm createState:@"state1"];
     [sm transitionFrom:initial to:state1 forEvent:@"event1" withSel:@selector(simpleMethod) executeIn:self];
     [sm post:@"event1"];
@@ -129,7 +134,8 @@
 {
     _string = [[NSMutableString alloc] init];
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
     SMState *state1 = [sm createState:@"state1"];
     SMState *state2 = [sm createState:@"state2"];
     [state1 setExitSelector:@selector(State1Exit) executeIn:self];
@@ -145,7 +151,8 @@
     _string = [[NSMutableString alloc] init];
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
     sm.globalExecuteIn = self;
-    SMState *initial = [sm createInitialState];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
     SMState *state1 = [sm createState:@"state1"];
     SMState *state2 = [sm createState:@"state2"];
     [state1 setExitSelector:@selector(State1Exit)];

@@ -1,9 +1,6 @@
 
 #import "SMStateMachine.h"
 
-
-#define INITIAL_STATE_NAME @"INITIAL"
-
 @interface SMStateMachine ()
 @property(strong, nonatomic, readonly) NSMutableArray *states;
 @property(strong, nonatomic) NSMutableArray *transitions;
@@ -16,16 +13,12 @@
 @synthesize transitions = _transitions;
 @synthesize curState = _curState;
 @synthesize globalExecuteIn = _globalExecuteIn;
+@synthesize initialState = _initialState;
 
 - (SMState *)createState:(NSString *)name {
     SMState *state = [[SMState alloc] initWithName:name];
     [self.states addObject:state];
     return state;
-}
-
-- (SMState *)createInitialState {
-    _curState = [self createState:INITIAL_STATE_NAME];
-    return _curState;
 }
 
 - (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event {
@@ -53,8 +46,8 @@
     if ([self.states count] == 0) {
         [NSException raise:@"Invalid statemachine" format:@"No states"];
     }
-    if (_curState == nil) {
-        [NSException raise:@"Invalid statemachine" format:@"curState is nil, may be in cause of no initial transition"];
+    if (_initialState == nil) {
+        [NSException raise:@"Invalid statemachine" format:@"initialState is nil"];
     }
 }
 
@@ -90,6 +83,13 @@
         _transitions = [[NSMutableArray alloc] init];
     }
     return _transitions;
+}
+
+-(void)setInitialState:(SMState*)aState {
+    _initialState = aState;
+    if (_curState == nil) {
+        _curState = _initialState;
+    }
 }
 
 @end

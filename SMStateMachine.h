@@ -39,8 +39,6 @@
 
 - (SMState *)createState:(NSString *)name;
 
-- (SMState *)createInitialState;
-
 - (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event;
 
 - (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event withAction:(SMAction *)action;
@@ -55,6 +53,8 @@
 
 @property(nonatomic, weak) NSObject *globalExecuteIn;
 @property(nonatomic, readonly) SMState *curState;
+@property(nonatomic) SMState *initialState;
+
 @end
 
 @interface SMState : NSObject
