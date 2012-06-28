@@ -1,9 +1,3 @@
-//
-//  Created by est1908 on 6/28/12.
-//
-// To change the template use AppCode | Preferences | File Templates.
-//
-
 
 #import "SMStateMachine.h"
 
@@ -174,7 +168,10 @@
     if (object == nil) {
         [NSException raise:@"Invalid action" format:@"No one object to execute selector found"];
     }
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [object performSelector:self.sel];
+#pragma clang diagnostic pop
 }
 
 @end

@@ -31,6 +31,7 @@
 - (void)testEmpty
 {
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    STAssertNotNil(sm, @"sm is nil");
 }
 
 - (void)testSimpleState
@@ -68,6 +69,7 @@
 {
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
     SMState *state1 = [sm createState:@"state1"];
+    STAssertNotNil(state1, @"state1 is nil");
     STAssertThrows([sm validate], @"Check for no initial state");
 }
 
