@@ -1,4 +1,4 @@
-SimpleStateMachine
+Simple State Machine written in Objective-C
 ==================
 
 Very simple state machine written in Objective-C.
