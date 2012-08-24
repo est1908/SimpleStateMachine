@@ -164,4 +164,39 @@
     STAssertEqualObjects(_string, @"State1Exit;TransAction;State2Entry;", @"Invalid calling sequence");
 }
 
+
+-(void)beep{
+    NSLog(@"Beep");
+}
+
+-(void)greenLightOn{
+    NSLog(@"greenLightOn");
+}
+
+-(void)redLightOn{
+    NSLog(@"redLightOn");
+}
+
+//turnstile
+-(void)testFowWiKi{
+    //Create
+    SMStateMachine *sm = [[SMStateMachine alloc] init];
+    sm.globalExecuteIn = self; //execute all selectors on self object
+    SMState *opened = [sm createState:@"open"];
+    SMState *closed = [sm createState:@"closed"];
+    sm.initialState = closed;
+    [opened setEntrySelector:@selector(greenLightOn)];
+    [closed setEntrySelector:@selector(redLightOn)];
+    [sm transitionFrom:closed to:opened forEvent:@"coin"];
+    [sm transitionFrom:opened to:closed forEvent:@"pass"];
+    [sm transitionFrom:opened to:closed forEvent:@"timeout"];
+    [sm transitionFrom:opened to:opened forEvent:@"coint" withSel:@selector(beep)];
+
+    //Usage
+    [sm validate];
+    [sm post:@"coin"];
+    [sm post:@"pass"];
+}
+
+
 @end
