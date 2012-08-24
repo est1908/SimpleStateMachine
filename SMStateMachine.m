@@ -14,6 +14,8 @@
 @synthesize curState = _curState;
 @synthesize globalExecuteIn = _globalExecuteIn;
 @synthesize initialState = _initialState;
+@synthesize monitor = _monitor;
+
 
 - (SMState *)createState:(NSString *)name {
     SMState *state = [[SMState alloc] initWithName:name];
@@ -54,10 +56,16 @@
 - (void)post:(NSString *)event {
     SMTransition *curTr = [self getTransitionFromState:_curState forEvent:event];
     if (curTr != nil) {
+        if ([self.monitor respondsToSelector:@selector(willExecuteTransitionFrom:to:withEvent:)]) {
+            [self.monitor willExecuteTransitionFrom:curTr.from to:curTr.to withEvent:event];
+        }
         [_curState.exit executeWithGlobalObject:self.globalExecuteIn];
         _curState = curTr.to;
         [[curTr action] executeWithGlobalObject:self.globalExecuteIn];
         [_curState.entry executeWithGlobalObject:self.globalExecuteIn];
+        if ([self.monitor respondsToSelector:@selector(didExecuteTransitionFrom:to:withEvent:)]) {
+            [self.monitor didExecuteTransitionFrom:curTr.from to:curTr.to withEvent:event];
+        }
     }
 }
 

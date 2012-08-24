@@ -7,7 +7,8 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "SMStateMachine.h"
 
-@interface SMStateMachineTests : SenTestCase
+@interface SMStateMachineTests : SenTestCase<SMMonitorDelegate>
 
 @end

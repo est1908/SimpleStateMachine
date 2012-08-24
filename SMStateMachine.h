@@ -34,6 +34,11 @@
 @class SMAction;
 @class SMState;
 
+@protocol SMMonitorDelegate <NSObject>
+@optional
+- (void)willExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
+- (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
+@end
 
 @interface SMStateMachine : NSObject
 
@@ -54,6 +59,7 @@
 @property(nonatomic, weak) NSObject *globalExecuteIn;
 @property(nonatomic, readonly) SMState *curState;
 @property(nonatomic) SMState *initialState;
+@property(nonatomic, weak) id<SMMonitorDelegate> monitor;
 
 @end
 
