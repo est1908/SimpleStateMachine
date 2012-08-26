@@ -164,14 +164,11 @@
     STAssertEqualObjects(_string, @"State1Exit;TransAction;State2Entry;", @"Invalid calling sequence");
 }
 
-- (void)willExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event {
+- (void)receiveEvent:(NSString *)event foundTransition:(SMTransition *)transition {
     _counter++;
-    STAssertEqualObjects(from.name, @"initial", @"Invalid from state");
-    STAssertEqualObjects(to.name, @"state1", @"Invalid to state");
-    STAssertEqualObjects(event, @"event1", @"Invalid event");
 }
 
--(void)testMonitorWillExecuteTransitionFrom {
+-(void)testMonitorReceiveEventFoundTransition {
     _counter = 0;
     SMStateMachine *  sm = [[SMStateMachine alloc] init];
     sm.monitor = self;
@@ -182,6 +179,21 @@
     [sm post:@"event1"];
     STAssertEquals(_counter, 2, @"Monitor willExecuteTransitionFrom not executed");
 }
+
+-(void)testMonitorReceiveEventFoundTransition_NoTransitionsFound {
+    _counter = 0;
+    SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    sm.monitor = self;
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState =  initial;
+    SMState *state1 = [sm createState:@"state1"];
+    [sm transitionFrom:initial to:state1 forEvent:@"event1"];
+    [sm post:@"unknown"];
+    [sm post:@"unknown"];
+    [sm post:@"unknown"];
+    STAssertEquals(_counter, 3, @"Monitor receiveEvent not executed");
+}
+
 
 - (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event {
     _counter++;

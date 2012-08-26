@@ -55,10 +55,10 @@
 
 - (void)post:(NSString *)event {
     SMTransition *curTr = [self getTransitionFromState:_curState forEvent:event];
+    if ([self.monitor respondsToSelector:@selector(receiveEvent:foundTransition:)]) {
+        [self.monitor receiveEvent:event foundTransition:curTr];
+    }
     if (curTr != nil) {
-        if ([self.monitor respondsToSelector:@selector(willExecuteTransitionFrom:to:withEvent:)]) {
-            [self.monitor willExecuteTransitionFrom:curTr.from to:curTr.to withEvent:event];
-        }
         [_curState.exit executeWithGlobalObject:self.globalExecuteIn];
         _curState = curTr.to;
         [[curTr action] executeWithGlobalObject:self.globalExecuteIn];

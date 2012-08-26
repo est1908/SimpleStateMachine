@@ -33,10 +33,11 @@
 
 @class SMAction;
 @class SMState;
+@class SMTransition;
 
 @protocol SMMonitorDelegate <NSObject>
 @optional
-- (void)willExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
+- (void)receiveEvent:(NSString *)event foundTransition:(SMTransition*)transition;
 - (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
 @end
 
