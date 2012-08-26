@@ -164,7 +164,7 @@
     STAssertEqualObjects(_string, @"State1Exit;TransAction;State2Entry;", @"Invalid calling sequence");
 }
 
-- (void)receiveEvent:(NSString *)event foundTransition:(SMTransition *)transition {
+- (void)receiveEvent:(NSString *)event forState:(SMState *)curState foundTransition:(SMTransition *)transition {
     _counter++;
 }
 

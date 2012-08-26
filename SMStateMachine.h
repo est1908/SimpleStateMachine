@@ -37,7 +37,7 @@
 
 @protocol SMMonitorDelegate <NSObject>
 @optional
-- (void)receiveEvent:(NSString *)event foundTransition:(SMTransition*)transition;
+- (void)receiveEvent:(NSString *)event forState:(SMState *)curState foundTransition:(SMTransition*)transition;
 - (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
 @end
 

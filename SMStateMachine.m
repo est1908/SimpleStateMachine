@@ -55,8 +55,8 @@
 
 - (void)post:(NSString *)event {
     SMTransition *curTr = [self getTransitionFromState:_curState forEvent:event];
-    if ([self.monitor respondsToSelector:@selector(receiveEvent:foundTransition:)]) {
-        [self.monitor receiveEvent:event foundTransition:curTr];
+    if ([self.monitor respondsToSelector:@selector(receiveEvent:forState:foundTransition:)]) {
+        [self.monitor receiveEvent:event forState:_curState foundTransition:curTr];
     }
     if (curTr != nil) {
         [_curState.exit executeWithGlobalObject:self.globalExecuteIn];
