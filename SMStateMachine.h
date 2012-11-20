@@ -30,10 +30,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SMState.h"
+#import "SMAction.h"
+#import "SMTransition.h"
 
-@class SMAction;
-@class SMState;
-@class SMTransition;
 
 @protocol SMMonitorDelegate <NSObject>
 @optional
@@ -64,47 +64,7 @@
 
 @end
 
-@interface SMState : NSObject
-- (id)initWithName:(NSString *)name;
-
-- (void)setEntrySelector:(SEL)entrySel executeIn:(NSObject *)object;
-
-- (void)setEntrySelector:(SEL)entrySel;
-
-- (void)setExitSelector:(SEL)exitSel executeIn:(NSObject *)object;
-
-- (void)setExitSelector:(SEL)exitSel;
-
-@property(nonatomic, readonly, strong) NSString *name;
-@property(nonatomic, strong) SMAction *entry;
-@property(nonatomic, strong) SMAction *exit;
-
-@end
 
 
-@interface SMAction : NSObject
 
-+ (SMAction *)actionWithSel:(SEL)sel;
-
-+ (SMAction *)actionWithSel:(SEL)sel executeIn:(NSObject *)executeInObj;
-
-- (id)initWithSel:(SEL)sel executeIn:(NSObject *)executeInObj;
-
-- (id)initWithSel:(SEL)sel;
-
-- (void)execute;
-
-- (void)executeWithGlobalObject:(NSObject *)globalExecuteInObj;
-
-@property(nonatomic, readonly) SEL sel;
-@property(nonatomic, readonly, weak) NSObject *executeInObj;
-
-@end
-
-@interface SMTransition : NSObject
-@property(weak, nonatomic) SMState *from;
-@property(weak, nonatomic) SMState *to;
-@property(strong, nonatomic) NSString *event;
-@property(strong, nonatomic) SMAction *action;
-@end
 
