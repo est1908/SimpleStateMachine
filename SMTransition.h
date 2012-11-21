@@ -10,8 +10,8 @@
 
 
 @interface SMTransition : NSObject
-@property(weak, nonatomic) SMState *from;
-@property(weak, nonatomic) SMState *to;
+@property(weak, nonatomic) SMNode *from;
+@property(weak, nonatomic) SMNode *to;
 @property(strong, nonatomic) NSString *event;
 @property(strong, nonatomic) SMAction *action;
 @end

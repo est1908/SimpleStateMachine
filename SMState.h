@@ -7,9 +7,11 @@
 
 #import <Foundation/Foundation.h>
 #import "SMAction.h"
+#import "SMNode.h"
 
+@class SMTransition;
 
-@interface SMState : NSObject
+@interface SMState : SMNode
 - (id)initWithName:(NSString *)name;
 
 - (void)setEntrySelector:(SEL)entrySel executeIn:(NSObject *)object;
@@ -20,7 +22,7 @@
 
 - (void)setExitSelector:(SEL)exitSel;
 
-@property(nonatomic, readonly, strong) NSString *name;
+
 @property(nonatomic, strong) SMAction *entry;
 @property(nonatomic, strong) SMAction *exit;
 

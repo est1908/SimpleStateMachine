@@ -41,7 +41,7 @@
     if (self.sel == nil) {
         return;
     }
-    NSObject *object = self.executeInObj != 0 ? self.executeInObj : globalExecuteInObj;
+    NSObject *object = self.executeInObj != nil ? self.executeInObj : globalExecuteInObj;
     if (object == nil) {
         [NSException raise:@"Invalid action" format:@"No one object to execute selector found"];
     }

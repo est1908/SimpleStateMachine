@@ -33,34 +33,38 @@
 #import "SMState.h"
 #import "SMAction.h"
 #import "SMTransition.h"
+#import "SMDecision.h"
 
-
-@protocol SMMonitorDelegate <NSObject>
-@optional
-- (void)receiveEvent:(NSString *)event forState:(SMState *)curState foundTransition:(SMTransition*)transition;
-- (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event;
-@end
 
 @interface SMStateMachine : NSObject
 
 - (SMState *)createState:(NSString *)name;
 
-- (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event;
+- (SMDecision *)createDecision:(NSString *)name withPredicateBlock:(SMDecisionBlock)block;
 
-- (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event withAction:(SMAction *)action;
+- (SMDecision *)createDecision:(NSString *)name withPredicateBoolBlock:(SMBoolDecisionBlock)block;
 
-- (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event withSel:(SEL)actionSel;
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event;
 
-- (void)transitionFrom:(SMState *)fromState to:(SMState *)toState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn;
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withAction:(SMAction *)action;
+
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSel:(SEL)actionSel;
+
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn;
+
+- (void)trueTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState;
+- (void)trueTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState withSel:(SEL)actionSel;
+- (void)falseTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState;
+- (void)falseTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState withSel:(SEL)actionSel;
 
 - (void)post:(NSString *)event;
 
 - (void)validate;
 
 @property(nonatomic, weak) NSObject *globalExecuteIn;
-@property(nonatomic, readonly) SMState *curState;
-@property(nonatomic) SMState *initialState;
-@property(nonatomic, weak) id<SMMonitorDelegate> monitor;
+@property(nonatomic, readonly) SMNode *curState;
+@property(nonatomic) SMNode *initialState;
+@property(nonatomic, weak) id <SMMonitorDelegate> monitor;
 
 @end
 

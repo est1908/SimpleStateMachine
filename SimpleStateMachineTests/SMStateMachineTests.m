@@ -120,6 +120,10 @@
     STAssertEquals(_counter, 1, @"Transition action not executed");
 }
 
+
+-(void)State1Entry{
+    [_string appendString:@"State1Entry;"];
+}
 -(void)State1Exit{
     [_string appendString:@"State1Exit;"];
 }
@@ -164,7 +168,7 @@
     STAssertEqualObjects(_string, @"State1Exit;TransAction;State2Entry;", @"Invalid calling sequence");
 }
 
-- (void)receiveEvent:(NSString *)event forState:(SMState *)curState foundTransition:(SMTransition *)transition {
+- (void)receiveEvent:(NSString *)event forState:(SMNode *)curState foundTransition:(SMTransition *)transition {
     _counter++;
 }
 
@@ -195,7 +199,7 @@
 }
 
 
-- (void)didExecuteTransitionFrom:(SMState *)from to:(SMState *)to withEvent:(NSString *)event {
+- (void)didExecuteTransitionFrom:(SMNode *)from to:(SMNode *)to withEvent:(NSString *)event {
     _counter++;
     STAssertEqualObjects(from.name, @"initial", @"Invalid from state");
     STAssertEqualObjects(to.name, @"state1", @"Invalid to state");
@@ -214,6 +218,68 @@
     STAssertEquals(_counter, 2, @"Monitor willExecuteTransitionFrom not executed");
 }
 
+-(void)testDecision1{
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState =  initial;
+    sm.globalExecuteIn = self;
+
+    SMDecision *decision = [sm createDecision:@"decicson" withPredicateBlock:^(){
+        return @"decisionEvent1";
+    }];
+    SMState *state1 = [sm createState:@"state1"];
+    SMState *state2 = [sm createState:@"state2"];
+    [state1 setEntrySelector:@selector(State1Entry)];
+    [state2 setEntrySelector:@selector(State2Entry)];
+    [sm transitionFrom:initial to:decision forEvent:@"event1"];
+    [sm transitionFrom:decision to:state1 forEvent:@"decisionEvent1"];
+    [sm transitionFrom:decision to:state2 forEvent:@"decisionEvent2"];
+    [sm post:@"event1"];
+    STAssertEqualObjects(_string, @"State1Entry;", @"Invalid calling sequence");
+}
+
+-(void)testDecision2{
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState =  initial;
+    sm.globalExecuteIn = self;
+
+    SMDecision *decision = [sm createDecision:@"decicson" withPredicateBlock:^(){
+        return @"decisionEvent2";
+    }];
+    SMState *state1 = [sm createState:@"state1"];
+    SMState *state2 = [sm createState:@"state2"];
+    [state1 setEntrySelector:@selector(State1Entry)];
+    [state2 setEntrySelector:@selector(State2Entry)];
+    [sm transitionFrom:initial to:decision forEvent:@"event1"];
+    [sm transitionFrom:decision to:state1 forEvent:@"decisionEvent1"];
+    [sm transitionFrom:decision to:state2 forEvent:@"decisionEvent2"];
+    [sm post:@"event1"];
+    STAssertEqualObjects(_string, @"State2Entry;", @"Invalid calling sequence");
+}
+
+-(void)testBoolDecision{
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState =  initial;
+    sm.globalExecuteIn = self;
+
+    SMDecision *decision = [sm createDecision:@"decicson" withPredicateBoolBlock:^(){
+        return NO;
+    }];
+    SMState *state1 = [sm createState:@"state1"];
+    SMState *state2 = [sm createState:@"state2"];
+    [state1 setEntrySelector:@selector(State1Entry)];
+    [state2 setEntrySelector:@selector(State2Entry)];
+    [sm transitionFrom:initial to:decision forEvent:@"event1"];
+    [sm trueTransitionFrom:decision to:state1];
+    [sm falseTransitionFrom:decision to:state2];
+    [sm post:@"event1"];
+    STAssertEqualObjects(_string, @"State2Entry;", @"Invalid calling sequence");
+}
 
 -(void)beep{
     NSLog(@"Beep");
