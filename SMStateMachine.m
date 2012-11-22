@@ -20,11 +20,15 @@
 }
 
 - (SMDecision *)createDecision:(NSString *)name withPredicateBlock:(SMDecisionBlock)block {
-    return [[SMDecision alloc] initWithName:name andBlock:block];
+    SMDecision* node = [[SMDecision alloc] initWithName:name andBlock:block];
+    [self.states addObject:node];
+    return node;
 }
 
 - (SMDecision *)createDecision:(NSString *)name withPredicateBoolBlock:(SMBoolDecisionBlock)block {
-    return [[SMDecision alloc] initWithName:name andBoolBlock:block];
+    SMDecision* node = [[SMDecision alloc] initWithName:name andBoolBlock:block];
+    [self.states addObject:node];
+    return node;
 }
 
 - (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event {
