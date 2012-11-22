@@ -12,8 +12,8 @@
 @interface SMStateMachineAsync : SMStateMachine
 
 -(void)postAsync:(NSString *)event;
--(void)postAsync:(NSString *)event after:(NSUInteger)milliseconds;
--(void)dropTimingEvent:(NSString *)event;
+-(NSString *)postAsync:(NSString *)event after:(NSUInteger)milliseconds;
+-(void)dropTimingEvent:(NSString *)eventUuid;
 
 
 
