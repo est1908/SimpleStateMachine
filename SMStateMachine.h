@@ -34,7 +34,6 @@
 #import "SMAction.h"
 #import "SMTransition.h"
 #import "SMDecision.h"
-#import "SMMonitorLogging.h"
 
 
 @interface SMStateMachine : NSObject
