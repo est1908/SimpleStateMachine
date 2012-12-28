@@ -15,7 +15,10 @@
 		15B829D1159B209200AB3C8C /* SMStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B829D1159B209200AB3C8B /* SMStateMachine.m */; };
 		A98C720B09DF78049B576A25 /* SMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C74B92723A2FF0E387EDB /* SMAction.m */; };
 		A98C73206644488E197BB17A /* SMState.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C7D602053BC36048A1479 /* SMState.m */; };
+		A98C772EE2F08E00E16FB67A /* SMStateMachineAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C732C25273BF1B093E4D5 /* SMStateMachineAsync.m */; };
 		A98C78D8D7B04733D5D01503 /* SMDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C7E320DDAF9A353C700FB /* SMDecision.m */; };
+		A98C7987DA6571A52932C134 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A98C76796D9E0AC92322D51E /* README.md */; };
+		A98C79BE81118EE0DD12277A /* SMTurnstileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C7BA6A00A511351167D83 /* SMTurnstileTests.m */; };
 		A98C7EC35A0E66CE8EAE0EF4 /* SMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C77AA0D9A8CE2E0791B7A /* SMTransition.m */; };
 		A98C7F7514E523229225062A /* SMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C70B48CD57276ACF97A27 /* SMNode.m */; };
 		A98C7F7A41F955F5F74DEA41 /* SMStateMachineExecuteContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C753303B764B1FDDA73F3 /* SMStateMachineExecuteContext.m */; };
@@ -38,13 +41,18 @@
 		A98C712AF645D91AA119F2CF /* SMTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTransition.h; sourceTree = "<group>"; };
 		A98C71751B64166EB4354160 /* SMStateMachineExecuteContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineExecuteContext.h; sourceTree = "<group>"; };
 		A98C724876BB043936614971 /* SMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNode.h; sourceTree = "<group>"; };
+		A98C732C25273BF1B093E4D5 /* SMStateMachineAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineAsync.m; sourceTree = "<group>"; };
 		A98C7379883C4C44F2C85A3F /* SMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCommon.h; sourceTree = "<group>"; };
 		A98C740D3B18D3BD38E49D2A /* SMDecision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDecision.h; sourceTree = "<group>"; };
 		A98C74B92723A2FF0E387EDB /* SMAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAction.m; sourceTree = "<group>"; };
 		A98C753303B764B1FDDA73F3 /* SMStateMachineExecuteContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineExecuteContext.m; sourceTree = "<group>"; };
+		A98C76796D9E0AC92322D51E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
 		A98C77AA0D9A8CE2E0791B7A /* SMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTransition.m; sourceTree = "<group>"; };
+		A98C78FD53C92AA81E70D98D /* SMStateMachineAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineAsync.h; sourceTree = "<group>"; };
+		A98C7BA6A00A511351167D83 /* SMTurnstileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTurnstileTests.m; sourceTree = "<group>"; };
 		A98C7D602053BC36048A1479 /* SMState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMState.m; sourceTree = "<group>"; };
 		A98C7E320DDAF9A353C700FB /* SMDecision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDecision.m; sourceTree = "<group>"; };
+		A98C7F9792CFACCC1D39CF21 /* SMTurnstileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTurnstileTests.h; sourceTree = "<group>"; };
 		A98C7FAB91958DC3D276A27B /* SMAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAction.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +77,7 @@
 				15B829C4159B207600AB3C7C /* SimpleStateMachineTests */,
 				15B829BD159B207600AB3C7C /* Frameworks */,
 				15B829BC159B207600AB3C7C /* Products */,
+				A98C76796D9E0AC92322D51E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +105,8 @@
 				15B829CA159B207600AB3C7C /* SMStateMachineTests.h */,
 				15B829CB159B207600AB3C7C /* SMStateMachineTests.m */,
 				15B829C5159B207600AB3C7C /* Supporting Files */,
+				A98C7BA6A00A511351167D83 /* SMTurnstileTests.m */,
+				A98C7F9792CFACCC1D39CF21 /* SMTurnstileTests.h */,
 			);
 			path = SimpleStateMachineTests;
 			sourceTree = "<group>";
@@ -128,6 +139,8 @@
 				A98C7379883C4C44F2C85A3F /* SMCommon.h */,
 				A98C753303B764B1FDDA73F3 /* SMStateMachineExecuteContext.m */,
 				A98C71751B64166EB4354160 /* SMStateMachineExecuteContext.h */,
+				A98C78FD53C92AA81E70D98D /* SMStateMachineAsync.h */,
+				A98C732C25273BF1B093E4D5 /* SMStateMachineAsync.m */,
 			);
 			name = SimpleStateMachine;
 			sourceTree = "<group>";
@@ -184,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15B829C9159B207600AB3C7C /* InfoPlist.strings in Resources */,
+				A98C7987DA6571A52932C134 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +232,8 @@
 				A98C7F7514E523229225062A /* SMNode.m in Sources */,
 				A98C78D8D7B04733D5D01503 /* SMDecision.m in Sources */,
 				A98C7F7A41F955F5F74DEA41 /* SMStateMachineExecuteContext.m in Sources */,
+				A98C79BE81118EE0DD12277A /* SMTurnstileTests.m in Sources */,
+				A98C772EE2F08E00E16FB67A /* SMStateMachineAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

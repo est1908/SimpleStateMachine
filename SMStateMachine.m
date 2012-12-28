@@ -78,6 +78,7 @@
     if (_initialState == nil) {
         [NSException raise:@"Invalid statemachine" format:@"initialState is nil"];
     }
+    //TODO: Add more validations
 }
 
 - (void)post:(NSString *)event {
