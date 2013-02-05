@@ -13,6 +13,7 @@
 		15B829C9159B207600AB3C7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15B829C7159B207600AB3C7C /* InfoPlist.strings */; };
 		15B829CC159B207600AB3C7C /* SMStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B829CB159B207600AB3C7C /* SMStateMachineTests.m */; };
 		15B829D1159B209200AB3C8C /* SMStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B829D1159B209200AB3C8B /* SMStateMachine.m */; };
+		15CD8B7016C11C6C00634E45 /* SMMonitorNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 15CD8B6F16C11C6C00634E45 /* SMMonitorNSLog.m */; };
 		A98C720B09DF78049B576A25 /* SMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C74B92723A2FF0E387EDB /* SMAction.m */; };
 		A98C73206644488E197BB17A /* SMState.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C7D602053BC36048A1479 /* SMState.m */; };
 		A98C772EE2F08E00E16FB67A /* SMStateMachineAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C732C25273BF1B093E4D5 /* SMStateMachineAsync.m */; };
@@ -36,6 +37,8 @@
 		15B829CD159B207600AB3C7C /* SimpleStateMachineTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleStateMachineTests-Prefix.pch"; sourceTree = "<group>"; };
 		15B829D1159B209200AB3C8B /* SMStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachine.m; sourceTree = "<group>"; };
 		15B829D1159B209200AB3C8D /* SMStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachine.h; sourceTree = "<group>"; };
+		15CD8B6E16C11C6C00634E45 /* SMMonitorNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMonitorNSLog.h; sourceTree = "<group>"; };
+		15CD8B6F16C11C6C00634E45 /* SMMonitorNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMonitorNSLog.m; sourceTree = "<group>"; };
 		A98C70B17CF4D8006452B4D3 /* SMState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMState.h; sourceTree = "<group>"; };
 		A98C70B48CD57276ACF97A27 /* SMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNode.m; sourceTree = "<group>"; };
 		A98C712AF645D91AA119F2CF /* SMTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTransition.h; sourceTree = "<group>"; };
@@ -104,9 +107,9 @@
 			children = (
 				15B829CA159B207600AB3C7C /* SMStateMachineTests.h */,
 				15B829CB159B207600AB3C7C /* SMStateMachineTests.m */,
-				15B829C5159B207600AB3C7C /* Supporting Files */,
-				A98C7BA6A00A511351167D83 /* SMTurnstileTests.m */,
 				A98C7F9792CFACCC1D39CF21 /* SMTurnstileTests.h */,
+				A98C7BA6A00A511351167D83 /* SMTurnstileTests.m */,
+				15B829C5159B207600AB3C7C /* Supporting Files */,
 			);
 			path = SimpleStateMachineTests;
 			sourceTree = "<group>";
@@ -124,23 +127,25 @@
 		15B829D1159B209200AB3C7C /* SimpleStateMachine */ = {
 			isa = PBXGroup;
 			children = (
+				A98C7FAB91958DC3D276A27B /* SMAction.h */,
+				A98C74B92723A2FF0E387EDB /* SMAction.m */,
+				A98C7379883C4C44F2C85A3F /* SMCommon.h */,
+				A98C740D3B18D3BD38E49D2A /* SMDecision.h */,
+				A98C7E320DDAF9A353C700FB /* SMDecision.m */,
+				15CD8B6E16C11C6C00634E45 /* SMMonitorNSLog.h */,
+				15CD8B6F16C11C6C00634E45 /* SMMonitorNSLog.m */,
+				A98C724876BB043936614971 /* SMNode.h */,
+				A98C70B48CD57276ACF97A27 /* SMNode.m */,
+				A98C70B17CF4D8006452B4D3 /* SMState.h */,
+				A98C7D602053BC36048A1479 /* SMState.m */,
 				15B829D1159B209200AB3C8D /* SMStateMachine.h */,
 				15B829D1159B209200AB3C8B /* SMStateMachine.m */,
-				A98C77AA0D9A8CE2E0791B7A /* SMTransition.m */,
-				A98C712AF645D91AA119F2CF /* SMTransition.h */,
-				A98C74B92723A2FF0E387EDB /* SMAction.m */,
-				A98C7FAB91958DC3D276A27B /* SMAction.h */,
-				A98C7D602053BC36048A1479 /* SMState.m */,
-				A98C70B17CF4D8006452B4D3 /* SMState.h */,
-				A98C70B48CD57276ACF97A27 /* SMNode.m */,
-				A98C724876BB043936614971 /* SMNode.h */,
-				A98C7E320DDAF9A353C700FB /* SMDecision.m */,
-				A98C740D3B18D3BD38E49D2A /* SMDecision.h */,
-				A98C7379883C4C44F2C85A3F /* SMCommon.h */,
-				A98C753303B764B1FDDA73F3 /* SMStateMachineExecuteContext.m */,
-				A98C71751B64166EB4354160 /* SMStateMachineExecuteContext.h */,
 				A98C78FD53C92AA81E70D98D /* SMStateMachineAsync.h */,
 				A98C732C25273BF1B093E4D5 /* SMStateMachineAsync.m */,
+				A98C71751B64166EB4354160 /* SMStateMachineExecuteContext.h */,
+				A98C753303B764B1FDDA73F3 /* SMStateMachineExecuteContext.m */,
+				A98C712AF645D91AA119F2CF /* SMTransition.h */,
+				A98C77AA0D9A8CE2E0791B7A /* SMTransition.m */,
 			);
 			name = SimpleStateMachine;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				A98C7F7A41F955F5F74DEA41 /* SMStateMachineExecuteContext.m in Sources */,
 				A98C79BE81118EE0DD12277A /* SMTurnstileTests.m in Sources */,
 				A98C772EE2F08E00E16FB67A /* SMStateMachineAsync.m in Sources */,
+				15CD8B7016C11C6C00634E45 /* SMMonitorNSLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +348,7 @@
 				15B829D0159B207600AB3C7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

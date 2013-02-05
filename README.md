@@ -11,6 +11,7 @@ Very simple state machine written in Objective-C.
 * Decisions
 * Asynchronous mode
 * Timing events in asynchronous mode
+* Logging
 
 
 Turnstile example
@@ -71,5 +72,26 @@ Decision example
     STAssertEquals(1, self.returnCoinsCounter, nil);
     [sm post:@"coin"];
     STAssertEquals(2, self.returnCoinsCounter, nil);`
+
+Logging example
+--------
+
+For enable logging you need to set the **monitor** property of fsm object to **SMMonitorDelegate** protocol implementation.  
+You can use the default **SMMonitorNSLog** implementation or write your own.  
+
+**_Attention!_** You need to have strong reference to you monitor object, because the fsm monitor property descrived as _@property(nonatomic, weak) id &lt;SMMonitorDelegate> monitor;_  
+
+
+
+    //strong ref to monitor object
+    SMMonitorNSLog *nsLogMonitor =[[SMMonitorNSLog alloc] initWithSmName:@"Turnstile"];
+    SMStateMachine *sm = [[SMStateMachine alloc] init]; 
+    //log to NSLog
+    sm.monitor = nsLogMonitor;
+    ...
+
+
+
+
 
 PS Feel free to contact me :)

@@ -6,6 +6,7 @@
 
 
 #import "SMTurnstileTests.h"
+#import "SMMonitorNSLog.h"
 
 
 @interface  SMTurnstileTests()
@@ -35,8 +36,12 @@
 -(void)testTurnstileWithDecision{
     //Create structure
     __weak id weakSelf = self;
+    //strong ref to monitor object
+    SMMonitorNSLog *nsLogMonitor =[[SMMonitorNSLog alloc] initWithSmName:@"Turnstile"];
     SMStateMachine *sm = [[SMStateMachine alloc] init];
     sm.globalExecuteIn = self; //execute all selectors on self object
+    //log to NSLog
+    sm.monitor = nsLogMonitor;
     SMState *opened = [sm createState:@"open"];
     SMState *closed = [sm createState:@"closed"];
     SMDecision *isWorkTime = [sm createDecision:@"isWorkTime" withPredicateBoolBlock:^(){
