@@ -40,14 +40,28 @@
         [context.monitor receiveEvent:event forState:self foundTransition:curTr];
     }
     if (curTr != nil) {
-        [self _exitWithContext:context];
-        context.curState = curTr.to;
+        const BOOL shouldChangeStates = (nil != curTr.to);
+        
+        // Exit the old state.
+        if (shouldChangeStates) {
+            [self _exitWithContext:context];
+            context.curState = curTr.to;
+        }
+        
+        // Execute the transition action.
         [[curTr action] executeWithGlobalObject:context.globalExecuteIn];
-        [context.curState _entryWithContext:context];
+        
+        // Enter the new state.
+        if (shouldChangeStates) {
+            [context.curState _entryWithContext:context];
+        }
+        
+        // Inform the monitor.
         if ([context.monitor respondsToSelector:@selector(didExecuteTransitionFrom:to:withEvent:)]) {
             [context.monitor didExecuteTransitionFrom:curTr.from to:context.curState withEvent:event];
         }
     }
+
 }
 
 - (void)_entryWithContext:(SMStateMachineExecuteContext *)context {

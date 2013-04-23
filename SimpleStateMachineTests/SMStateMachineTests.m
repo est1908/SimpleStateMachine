@@ -314,5 +314,35 @@
     [sm post:@"pass"];
 }
 
+// An internal loopback "transition" does not change the state, but does execute the transition action.
+-(void)testInternalLoopbackTransition{
+    NSString* const kEventLoopback = @"loopback";
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine* sm = [[SMStateMachine alloc] init];
+    sm.globalExecuteIn = self;
+    SMState* state = [sm createState:@"state"];
+    sm.initialState = state;
+    [state setEntrySelector:@selector(State1Entry)];
+    [state setExitSelector:@selector(State1Exit)];
+    [sm internalTransitionFrom:state forEvent:kEventLoopback withSel:@selector(TransAction)];
+    [sm post:kEventLoopback];
+    STAssertEqualObjects(_string, @"TransAction;", @"Only the transition action should execute");
+}
+
+// An external loopback transition leaves the current state, only to return to the same state.
+// This executes the state's exit action, followed by the transition action, and finally the state's entry action.
+-(void)testExternalLoopbackTransition{
+    NSString* const kEventLoopback = @"loopback";
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine* sm = [[SMStateMachine alloc] init];
+    sm.globalExecuteIn = self;
+    SMState* state = [sm createState:@"state"];
+    sm.initialState = state;
+    [state setEntrySelector:@selector(State1Entry)];
+    [state setExitSelector:@selector(State1Exit)];
+    [sm transitionFrom:state to:state forEvent:kEventLoopback withSel:@selector(TransAction)];
+    [sm post:kEventLoopback];
+    STAssertEqualObjects(_string, @"State1Exit;TransAction;State1Entry;", @"Invalid calling sequence");
+}
 
 @end
