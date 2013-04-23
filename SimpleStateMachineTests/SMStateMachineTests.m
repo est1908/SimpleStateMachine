@@ -324,7 +324,7 @@
     sm.initialState = state;
     [state setEntrySelector:@selector(State1Entry)];
     [state setExitSelector:@selector(State1Exit)];
-    [sm transitionFrom:state to:nil forEvent:kEventLoopback withSel:@selector(TransAction)];
+    [sm internalTransitionFrom:state forEvent:kEventLoopback withSel:@selector(TransAction)];
     [sm post:kEventLoopback];
     STAssertEqualObjects(_string, @"TransAction;", @"Only the transition action should execute");
 }
