@@ -57,6 +57,9 @@
 - (void)falseTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState;
 - (void)falseTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState withSel:(SEL)actionSel;
 
+- (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel;
+- (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn;
+
 - (void)post:(NSString *)event;
 
 - (void)validate;
