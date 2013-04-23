@@ -59,10 +59,6 @@
     [self transitionFrom:fromState to:toState forEvent:SM_EVENT_FALSE withAction:[SMAction actionWithSel:actionSel]];
 }
 
-- (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withAction:(SMAction *)action {
-    [self transitionFrom:fromState to:nil forEvent:event withAction:action];
-}
-
 - (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel {
     [self transitionFrom:fromState to:nil forEvent:event withAction:[SMAction actionWithSel:actionSel]];
 }
