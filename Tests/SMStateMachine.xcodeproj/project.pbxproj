@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15A6BD291794FE31000326D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD281794FE31000326D0 /* Foundation.framework */; };
+		15A6BD381794FE31000326D0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD371794FE31000326D0 /* SenTestingKit.framework */; };
+		15A6BD3A1794FE31000326D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD391794FE31000326D0 /* UIKit.framework */; };
+		15A6BD3B1794FE31000326D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD281794FE31000326D0 /* Foundation.framework */; };
+		15A6BD3E1794FE31000326D0 /* libSMStateMachine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD251794FE31000326D0 /* libSMStateMachine.a */; };		
+		15A6BD521794FEBD000326D0 /* SMTurnstileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD511794FEBD000326D0 /* SMTurnstileTests.m */; };
+		15A6BD671794FEE2000326D0 /* SMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD551794FEE2000326D0 /* SMAction.m */; };
+		15A6BD681794FEE2000326D0 /* SMDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD581794FEE2000326D0 /* SMDecision.m */; };
+		15A6BD691794FEE2000326D0 /* SMMonitorNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD5A1794FEE2000326D0 /* SMMonitorNSLog.m */; };
+		15A6BD6A1794FEE2000326D0 /* SMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD5C1794FEE2000326D0 /* SMNode.m */; };
+		15A6BD6B1794FEE2000326D0 /* SMState.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD5E1794FEE2000326D0 /* SMState.m */; };
+		15A6BD6C1794FEE2000326D0 /* SMStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD601794FEE2000326D0 /* SMStateMachine.m */; };
+		15A6BD6D1794FEE2000326D0 /* SMStateMachineAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD621794FEE2000326D0 /* SMStateMachineAsync.m */; };
+		15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */; };
+		15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD661794FEE2000326D0 /* SMTransition.m */; };
+		15A6BD721794FFDE000326D0 /* SMStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15A6BD3C1794FE31000326D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15A6BD1D1794FE31000326D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15A6BD241794FE31000326D0;
+			remoteInfo = SMStateMachine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		15A6BD231794FE31000326D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		15A6BD251794FE31000326D0 /* libSMStateMachine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMStateMachine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A6BD281794FE31000326D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15A6BD361794FE31000326D0 /* SMStateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMStateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A6BD371794FE31000326D0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		15A6BD391794FE31000326D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+
+
+		15A6BD501794FEBD000326D0 /* SMTurnstileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTurnstileTests.h; sourceTree = SOURCE_ROOT; };
+		15A6BD511794FEBD000326D0 /* SMTurnstileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTurnstileTests.m; sourceTree = SOURCE_ROOT; };
+		15A6BD541794FEE2000326D0 /* SMAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAction.h; path = ../SMStateMachine/SMAction.h; sourceTree = "<group>"; };
+		15A6BD551794FEE2000326D0 /* SMAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMAction.m; path = ../SMStateMachine/SMAction.m; sourceTree = "<group>"; };
+		15A6BD561794FEE2000326D0 /* SMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCommon.h; path = ../SMStateMachine/SMCommon.h; sourceTree = "<group>"; };
+		15A6BD571794FEE2000326D0 /* SMDecision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMDecision.h; path = ../SMStateMachine/SMDecision.h; sourceTree = "<group>"; };
+		15A6BD581794FEE2000326D0 /* SMDecision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMDecision.m; path = ../SMStateMachine/SMDecision.m; sourceTree = "<group>"; };
+		15A6BD591794FEE2000326D0 /* SMMonitorNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMMonitorNSLog.h; path = ../SMStateMachine/SMMonitorNSLog.h; sourceTree = "<group>"; };
+		15A6BD5A1794FEE2000326D0 /* SMMonitorNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMMonitorNSLog.m; path = ../SMStateMachine/SMMonitorNSLog.m; sourceTree = "<group>"; };
+		15A6BD5B1794FEE2000326D0 /* SMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMNode.h; path = ../SMStateMachine/SMNode.h; sourceTree = "<group>"; };
+		15A6BD5C1794FEE2000326D0 /* SMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMNode.m; path = ../SMStateMachine/SMNode.m; sourceTree = "<group>"; };
+		15A6BD5D1794FEE2000326D0 /* SMState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMState.h; path = ../SMStateMachine/SMState.h; sourceTree = "<group>"; };
+		15A6BD5E1794FEE2000326D0 /* SMState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMState.m; path = ../SMStateMachine/SMState.m; sourceTree = "<group>"; };
+		15A6BD5F1794FEE2000326D0 /* SMStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMStateMachine.h; path = ../SMStateMachine/SMStateMachine.h; sourceTree = "<group>"; };
+		15A6BD601794FEE2000326D0 /* SMStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMStateMachine.m; path = ../SMStateMachine/SMStateMachine.m; sourceTree = "<group>"; };
+		15A6BD611794FEE2000326D0 /* SMStateMachineAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMStateMachineAsync.h; path = ../SMStateMachine/SMStateMachineAsync.h; sourceTree = "<group>"; };
+		15A6BD621794FEE2000326D0 /* SMStateMachineAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMStateMachineAsync.m; path = ../SMStateMachine/SMStateMachineAsync.m; sourceTree = "<group>"; };
+		15A6BD631794FEE2000326D0 /* SMStateMachineExecuteContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMStateMachineExecuteContext.h; path = ../SMStateMachine/SMStateMachineExecuteContext.h; sourceTree = "<group>"; };
+		15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMStateMachineExecuteContext.m; path = ../SMStateMachine/SMStateMachineExecuteContext.m; sourceTree = "<group>"; };
+		15A6BD651794FEE2000326D0 /* SMTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMTransition.h; path = ../SMStateMachine/SMTransition.h; sourceTree = "<group>"; };
+		15A6BD661794FEE2000326D0 /* SMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMTransition.m; path = ../SMStateMachine/SMTransition.m; sourceTree = "<group>"; };
+		15A6BD701794FFDE000326D0 /* SMStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineTests.h; sourceTree = SOURCE_ROOT; };
+		15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineTests.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15A6BD221794FE31000326D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6BD291794FE31000326D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A6BD321794FE31000326D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6BD381794FE31000326D0 /* SenTestingKit.framework in Frameworks */,
+				15A6BD3A1794FE31000326D0 /* UIKit.framework in Frameworks */,
+				15A6BD3B1794FE31000326D0 /* Foundation.framework in Frameworks */,
+				15A6BD3E1794FE31000326D0 /* libSMStateMachine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15A6BD1C1794FE31000326D0 = {
+			isa = PBXGroup;
+			children = (
+				15A6BD531794FECB000326D0 /* Source */,
+				15A6BD3F1794FE31000326D0 /* SMStateMachineTests */,
+				15A6BD271794FE31000326D0 /* Frameworks */,
+				15A6BD261794FE31000326D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15A6BD261794FE31000326D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15A6BD251794FE31000326D0 /* libSMStateMachine.a */,
+				15A6BD361794FE31000326D0 /* SMStateMachineTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15A6BD271794FE31000326D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15A6BD281794FE31000326D0 /* Foundation.framework */,
+				15A6BD371794FE31000326D0 /* SenTestingKit.framework */,
+				15A6BD391794FE31000326D0 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15A6BD3F1794FE31000326D0 /* SMStateMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				15A6BD701794FFDE000326D0 /* SMStateMachineTests.h */,
+				15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */,
+				15A6BD501794FEBD000326D0 /* SMTurnstileTests.h */,
+				15A6BD511794FEBD000326D0 /* SMTurnstileTests.m */,
+				15A6BD401794FE31000326D0 /* Supporting Files */,
+			);
+			path = SMStateMachineTests;
+			sourceTree = "<group>";
+		};
+		15A6BD401794FE31000326D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15A6BD411794FE31000326D0 /* SMStateMachineTests-Info.plist */,				
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15A6BD531794FECB000326D0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				15A6BD541794FEE2000326D0 /* SMAction.h */,
+				15A6BD551794FEE2000326D0 /* SMAction.m */,
+				15A6BD561794FEE2000326D0 /* SMCommon.h */,
+				15A6BD571794FEE2000326D0 /* SMDecision.h */,
+				15A6BD581794FEE2000326D0 /* SMDecision.m */,
+				15A6BD591794FEE2000326D0 /* SMMonitorNSLog.h */,
+				15A6BD5A1794FEE2000326D0 /* SMMonitorNSLog.m */,
+				15A6BD5B1794FEE2000326D0 /* SMNode.h */,
+				15A6BD5C1794FEE2000326D0 /* SMNode.m */,
+				15A6BD5D1794FEE2000326D0 /* SMState.h */,
+				15A6BD5E1794FEE2000326D0 /* SMState.m */,
+				15A6BD5F1794FEE2000326D0 /* SMStateMachine.h */,
+				15A6BD601794FEE2000326D0 /* SMStateMachine.m */,
+				15A6BD611794FEE2000326D0 /* SMStateMachineAsync.h */,
+				15A6BD621794FEE2000326D0 /* SMStateMachineAsync.m */,
+				15A6BD631794FEE2000326D0 /* SMStateMachineExecuteContext.h */,
+				15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */,
+				15A6BD651794FEE2000326D0 /* SMTransition.h */,
+				15A6BD661794FEE2000326D0 /* SMTransition.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15A6BD241794FE31000326D0 /* SMStateMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A6BD4A1794FE31000326D0 /* Build configuration list for PBXNativeTarget "SMStateMachine" */;
+			buildPhases = (
+				15A6BD211794FE31000326D0 /* Sources */,
+				15A6BD221794FE31000326D0 /* Frameworks */,
+				15A6BD231794FE31000326D0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SMStateMachine;
+			productName = SMStateMachine;
+			productReference = 15A6BD251794FE31000326D0 /* libSMStateMachine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		15A6BD351794FE31000326D0 /* SMStateMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A6BD4D1794FE31000326D0 /* Build configuration list for PBXNativeTarget "SMStateMachineTests" */;
+			buildPhases = (
+				15A6BD311794FE31000326D0 /* Sources */,
+				15A6BD321794FE31000326D0 /* Frameworks */,
+				15A6BD331794FE31000326D0 /* Resources */,
+				15A6BD341794FE31000326D0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15A6BD3D1794FE31000326D0 /* PBXTargetDependency */,
+			);
+			name = SMStateMachineTests;
+			productName = SMStateMachineTests;
+			productReference = 15A6BD361794FE31000326D0 /* SMStateMachineTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15A6BD1D1794FE31000326D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Codemasters International";
+			};
+			buildConfigurationList = 15A6BD201794FE31000326D0 /* Build configuration list for PBXProject "SMStateMachine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 15A6BD1C1794FE31000326D0;
+			productRefGroup = 15A6BD261794FE31000326D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15A6BD241794FE31000326D0 /* SMStateMachine */,
+				15A6BD351794FE31000326D0 /* SMStateMachineTests */,
+			);
+		};
+/* End PBXProject section */
+
+
+
+/* Begin PBXShellScriptBuildPhase section */
+		15A6BD341794FE31000326D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15A6BD211794FE31000326D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6BD671794FEE2000326D0 /* SMAction.m in Sources */,
+				15A6BD681794FEE2000326D0 /* SMDecision.m in Sources */,
+				15A6BD691794FEE2000326D0 /* SMMonitorNSLog.m in Sources */,
+				15A6BD6A1794FEE2000326D0 /* SMNode.m in Sources */,
+				15A6BD6B1794FEE2000326D0 /* SMState.m in Sources */,
+				15A6BD6C1794FEE2000326D0 /* SMStateMachine.m in Sources */,
+				15A6BD6D1794FEE2000326D0 /* SMStateMachineAsync.m in Sources */,
+				15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */,
+				15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15A6BD311794FE31000326D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A6BD521794FEBD000326D0 /* SMTurnstileTests.m in Sources */,
+				15A6BD721794FFDE000326D0 /* SMStateMachineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15A6BD3D1794FE31000326D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15A6BD241794FE31000326D0 /* SMStateMachine */;
+			targetProxy = 15A6BD3C1794FE31000326D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+
+
+/* Begin XCBuildConfiguration section */
+		15A6BD481794FE31000326D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		15A6BD491794FE31000326D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15A6BD4B1794FE31000326D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SMStateMachine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		15A6BD4C1794FE31000326D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SMStateMachine.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		15A6BD4E1794FE31000326D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "SMStateMachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		15A6BD4F1794FE31000326D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = "SMStateMachineTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15A6BD201794FE31000326D0 /* Build configuration list for PBXProject "SMStateMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A6BD481794FE31000326D0 /* Debug */,
+				15A6BD491794FE31000326D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A6BD4A1794FE31000326D0 /* Build configuration list for PBXNativeTarget "SMStateMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A6BD4B1794FE31000326D0 /* Debug */,
+				15A6BD4C1794FE31000326D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A6BD4D1794FE31000326D0 /* Build configuration list for PBXNativeTarget "SMStateMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A6BD4E1794FE31000326D0 /* Debug */,
+				15A6BD4F1794FE31000326D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15A6BD1D1794FE31000326D0 /* Project object */;
+}
