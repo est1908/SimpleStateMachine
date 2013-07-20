@@ -16,7 +16,7 @@
 
 
 - (void)postAsync:(NSString *)event {
-    dispatch_async(self.queue, ^{
+    dispatch_async(self.serialQueue, ^{
         [self post: event];
     });
 }
@@ -32,7 +32,7 @@
     NSString *uuid = [self createUuid];
     [self.allowedTimingEvents addObject:uuid];
     dispatch_time_t timeout = dispatch_time(DISPATCH_TIME_NOW, milliseconds * NSEC_PER_MSEC);
-    dispatch_after(timeout, self.queue, ^{
+    dispatch_after(timeout, self.serialQueue, ^{
         if ([weakSelf.allowedTimingEvents containsObject:uuid]){
             [weakSelf.allowedTimingEvents removeObject:uuid];
             [weakSelf postAsync:event];
@@ -54,11 +54,11 @@
     return _allowedTimingEvents;
 }
 
--(dispatch_queue_t)queue{
-    if (_queue == NULL){
-        _queue = dispatch_get_main_queue();
+-(dispatch_queue_t)serialQueue {
+    if (_serialQueue == NULL){
+        _serialQueue = dispatch_get_main_queue();
     }
-    return _queue;
+    return _serialQueue;
 }
 
 
