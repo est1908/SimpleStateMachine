@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SMStateMachine"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Very simple state machine written in Objective-C." 
   s.homepage     = "https://github.com/est1908/SimpleStateMachine"
   s.license      = 'MIT'
