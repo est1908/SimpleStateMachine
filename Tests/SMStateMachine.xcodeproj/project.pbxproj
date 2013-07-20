@@ -11,7 +11,7 @@
 		15A6BD381794FE31000326D0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD371794FE31000326D0 /* SenTestingKit.framework */; };
 		15A6BD3A1794FE31000326D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD391794FE31000326D0 /* UIKit.framework */; };
 		15A6BD3B1794FE31000326D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD281794FE31000326D0 /* Foundation.framework */; };
-		15A6BD3E1794FE31000326D0 /* libSMStateMachine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD251794FE31000326D0 /* libSMStateMachine.a */; };		
+		15A6BD3E1794FE31000326D0 /* libSMStateMachine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD251794FE31000326D0 /* libSMStateMachine.a */; };
 		15A6BD521794FEBD000326D0 /* SMTurnstileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD511794FEBD000326D0 /* SMTurnstileTests.m */; };
 		15A6BD671794FEE2000326D0 /* SMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD551794FEE2000326D0 /* SMAction.m */; };
 		15A6BD681794FEE2000326D0 /* SMDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD581794FEE2000326D0 /* SMDecision.m */; };
@@ -53,8 +53,6 @@
 		15A6BD361794FE31000326D0 /* SMStateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMStateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A6BD371794FE31000326D0 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		15A6BD391794FE31000326D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-
-
 		15A6BD501794FEBD000326D0 /* SMTurnstileTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTurnstileTests.h; sourceTree = SOURCE_ROOT; };
 		15A6BD511794FEBD000326D0 /* SMTurnstileTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTurnstileTests.m; sourceTree = SOURCE_ROOT; };
 		15A6BD541794FEE2000326D0 /* SMAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMAction.h; path = ../SMStateMachine/SMAction.h; sourceTree = "<group>"; };
@@ -147,7 +145,7 @@
 		15A6BD401794FE31000326D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15A6BD411794FE31000326D0 /* SMStateMachineTests-Info.plist */,				
+				15A6BD411794FE31000326D0,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -204,7 +202,7 @@
 			buildPhases = (
 				15A6BD311794FE31000326D0 /* Sources */,
 				15A6BD321794FE31000326D0 /* Frameworks */,
-				15A6BD331794FE31000326D0 /* Resources */,
+				15A6BD331794FE31000326D0,
 				15A6BD341794FE31000326D0 /* ShellScript */,
 			);
 			buildRules = (
@@ -243,8 +241,6 @@
 			);
 		};
 /* End PBXProject section */
-
-
 
 /* Begin PBXShellScriptBuildPhase section */
 		15A6BD341794FE31000326D0 /* ShellScript */ = {
@@ -297,8 +293,6 @@
 			targetProxy = 15A6BD3C1794FE31000326D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-
 
 /* Begin XCBuildConfiguration section */
 		15A6BD481794FE31000326D0 /* Debug */ = {
