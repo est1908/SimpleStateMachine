@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15964572179BCB05008A43B6 /* SMStateMachineAsyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15964571179BCB05008A43B6 /* SMStateMachineAsyncTests.m */; };
 		15A6BD291794FE31000326D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD281794FE31000326D0 /* Foundation.framework */; };
 		15A6BD381794FE31000326D0 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD371794FE31000326D0 /* SenTestingKit.framework */; };
 		15A6BD3A1794FE31000326D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A6BD391794FE31000326D0 /* UIKit.framework */; };
@@ -23,6 +24,7 @@
 		15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */; };
 		15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD661794FEE2000326D0 /* SMTransition.m */; };
 		15A6BD721794FFDE000326D0 /* SMStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */; };
+		A98C7A4146A38E5E50BBC6D8 /* SMCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15964570179BCB05008A43B6 /* SMStateMachineAsyncTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineAsyncTests.h; sourceTree = SOURCE_ROOT; };
+		15964571179BCB05008A43B6 /* SMStateMachineAsyncTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineAsyncTests.m; sourceTree = SOURCE_ROOT; };
 		15A6BD251794FE31000326D0 /* libSMStateMachine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSMStateMachine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A6BD281794FE31000326D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		15A6BD361794FE31000326D0 /* SMStateMachineTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMStateMachineTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,9 @@
 		15A6BD661794FEE2000326D0 /* SMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMTransition.m; path = ../SMStateMachine/SMTransition.m; sourceTree = "<group>"; };
 		15A6BD701794FFDE000326D0 /* SMStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineTests.h; sourceTree = SOURCE_ROOT; };
 		15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineTests.m; sourceTree = SOURCE_ROOT; };
+		A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCompositeAction.m; sourceTree = "<group>"; };
+		A98C737A4CD6E9D022A5A325 /* SMCompositeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCompositeAction.h; sourceTree = "<group>"; };
+		A98C7D3EFCC1A9DF592C2A0C /* SMActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMActionProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +140,8 @@
 		15A6BD3F1794FE31000326D0 /* SMStateMachineTests */ = {
 			isa = PBXGroup;
 			children = (
+				15964570179BCB05008A43B6 /* SMStateMachineAsyncTests.h */,
+				15964571179BCB05008A43B6 /* SMStateMachineAsyncTests.m */,
 				15A6BD701794FFDE000326D0 /* SMStateMachineTests.h */,
 				15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */,
 				15A6BD501794FEBD000326D0 /* SMTurnstileTests.h */,
@@ -145,7 +154,6 @@
 		15A6BD401794FE31000326D0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				15A6BD411794FE31000326D0,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,6 +180,9 @@
 				15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */,
 				15A6BD651794FEE2000326D0 /* SMTransition.h */,
 				15A6BD661794FEE2000326D0 /* SMTransition.m */,
+				A98C7D3EFCC1A9DF592C2A0C /* SMActionProtocol.h */,
+				A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */,
+				A98C737A4CD6E9D022A5A325 /* SMCompositeAction.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -202,7 +213,6 @@
 			buildPhases = (
 				15A6BD311794FE31000326D0 /* Sources */,
 				15A6BD321794FE31000326D0 /* Frameworks */,
-				15A6BD331794FE31000326D0,
 				15A6BD341794FE31000326D0 /* ShellScript */,
 			);
 			buildRules = (
@@ -272,6 +282,7 @@
 				15A6BD6D1794FEE2000326D0 /* SMStateMachineAsync.m in Sources */,
 				15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */,
 				15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */,
+				A98C7A4146A38E5E50BBC6D8 /* SMCompositeAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +292,7 @@
 			files = (
 				15A6BD521794FEBD000326D0 /* SMTurnstileTests.m in Sources */,
 				15A6BD721794FFDE000326D0 /* SMStateMachineTests.m in Sources */,
+				15964572179BCB05008A43B6 /* SMStateMachineAsyncTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

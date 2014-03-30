@@ -49,6 +49,7 @@
 - (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withAction:(SMAction *)action;
 
 - (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSel:(SEL)actionSel;
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSelectors:(SEL)actionSelectors,...;
 
 - (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn;
 
@@ -58,6 +59,7 @@
 - (void)falseTransitionFrom:(SMDecision *)fromState to:(SMNode *)toState withSel:(SEL)actionSel;
 
 - (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel;
+- (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSelectors:(SEL)actionSelectors,...;
 - (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn;
 
 - (void)post:(NSString *)event;

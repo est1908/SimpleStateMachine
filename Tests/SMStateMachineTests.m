@@ -130,6 +130,8 @@
 -(void)TransAction{
     [_string appendString:@"TransAction;"];
 }
+
+
 -(void)State2Entry{
     [_string appendString:@"State2Entry;"];
 }
@@ -343,6 +345,24 @@
     [sm transitionFrom:state to:state forEvent:kEventLoopback withSel:@selector(TransAction)];
     [sm post:kEventLoopback];
     STAssertEqualObjects(_string, @"State1Exit;TransAction;State1Entry;", @"Invalid calling sequence");
+}
+
+- (void)testComplexAction
+{
+    _string = [[NSMutableString alloc] init];
+    SMStateMachine *  sm = [[SMStateMachine alloc] init];
+    sm.globalExecuteIn = self;
+    SMState *initial = [sm createState:@"initial"];
+    sm.initialState = initial;
+    SMState *state1 = [sm createState:@"state1"];
+    SMState *state2 = [sm createState:@"state2"];
+    [state1 setExitSelectors:@selector(State1Exit), @selector(State1Exit),nil];
+    [state2 setEntrySelectors:@selector(State2Entry), @selector(State2Entry), nil];
+    [sm transitionFrom:initial to:state1 forEvent:@"event1"];
+    [sm transitionFrom:state1 to:state2 forEvent:@"event2" withSelectors:@selector(TransAction),@selector(TransAction), nil];
+    [sm post:@"event1"];
+    [sm post:@"event2"];
+    STAssertEqualObjects(_string, @"State1Exit;State1Exit;TransAction;TransAction;State2Entry;State2Entry;", @"Invalid calling sequence");
 }
 
 @end

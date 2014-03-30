@@ -1,5 +1,6 @@
 
 #import "SMStateMachine.h"
+#import "SMCompositeAction.h"
 
 @interface SMStateMachine ()
 @property(strong, nonatomic, readonly) NSMutableArray *states;
@@ -39,6 +40,13 @@
     [self transitionFrom:fromState to:toState forEvent:event withAction:[SMAction actionWithSel:actionSel]];
 }
 
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSelectors:(SEL)firstSelector,... {
+    va_list args;
+    va_start(args, firstSelector);
+    [self transitionFrom:fromState to:toState forEvent:event withAction:[SMCompositeAction actionWithFirstSelector:firstSelector andVaList:args]];
+    va_end(args);
+}
+
 - (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn {
     [self transitionFrom:fromState to:toState forEvent:event withAction:[SMAction actionWithSel:actionSel executeIn:executeIn]];
 }
@@ -63,11 +71,18 @@
     [self transitionFrom:fromState to:nil forEvent:event withAction:[SMAction actionWithSel:actionSel]];
 }
 
+- (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSelectors:(SEL)firstSelector, ... {
+    va_list args;
+    va_start(args, firstSelector);
+    [self transitionFrom:fromState to:nil forEvent:event withAction:[SMCompositeAction actionWithFirstSelector:firstSelector andVaList:args]];
+    va_end(args);
+}
+
 - (void)internalTransitionFrom:(SMNode *)fromState forEvent:(NSString *)event withSel:(SEL)actionSel executeIn:(NSObject *)executeIn {
     [self transitionFrom:fromState to:nil forEvent:event withAction:[SMAction actionWithSel:actionSel executeIn:executeIn]];
 }
 
-- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withAction:(SMAction *)action {
+- (void)transitionFrom:(SMNode *)fromState to:(SMNode *)toState forEvent:(NSString *)event withAction:(id<SMActionProtocol>)action {
     SMTransition *transition = [[SMTransition alloc] init];
     transition.from = fromState;
     transition.to = toState;

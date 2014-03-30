@@ -18,13 +18,19 @@
 
 - (void)setEntrySelector:(SEL)entrySel;
 
+- (void)setEntrySelectors:(SEL)selectors,...NS_REQUIRES_NIL_TERMINATION;
+
+
 - (void)setExitSelector:(SEL)exitSel executeIn:(NSObject *)object;
 
 - (void)setExitSelector:(SEL)exitSel;
 
+- (void)setExitSelectors:(SEL)firstSelector,...NS_REQUIRES_NIL_TERMINATION;
 
-@property(nonatomic, strong) SMAction *entry;
-@property(nonatomic, strong) SMAction *exit;
+
+
+@property(nonatomic, strong) id<SMActionProtocol> entry;
+@property(nonatomic, strong) id<SMActionProtocol> exit;
 
 @end
 

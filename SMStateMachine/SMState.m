@@ -7,6 +7,7 @@
 
 #import "SMState.h"
 #import "SMTransition.h"
+#import "SMCompositeAction.h"
 
 @implementation SMState
 
@@ -30,8 +31,22 @@
     self.entry = [SMAction actionWithSel:entrySel];
 }
 
+- (void)setEntrySelectors:(SEL)firstSelector,...{
+    va_list args;
+    va_start(args, firstSelector);
+    self.entry = [SMCompositeAction actionWithFirstSelector:firstSelector andVaList:args];
+    va_end(args);
+}
+
 - (void)setExitSelector:(SEL)exitSel {
     self.exit = [SMAction actionWithSel:exitSel];
+}
+
+- (void)setExitSelectors:(SEL)firstSelector,...{
+    va_list args;
+    va_start(args, firstSelector);
+    self.exit = [SMCompositeAction actionWithFirstSelector:firstSelector andVaList:args];
+    va_end(args);
 }
 
 - (void)_postEvent:(NSString *)event withContext:(SMStateMachineExecuteContext *)context {
@@ -71,5 +86,9 @@
 - (void)_exitWithContext:(SMStateMachineExecuteContext *)context {
     [self.exit executeWithGlobalObject:context.globalExecuteIn];
 }
+
+
+
+
 
 @end

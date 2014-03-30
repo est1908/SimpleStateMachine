@@ -6,9 +6,10 @@
 
 
 #import <Foundation/Foundation.h>
+#import "SMActionProtocol.h"
 
 
-@interface SMAction : NSObject
+@interface SMAction : NSObject<SMActionProtocol>
 
 + (SMAction *)actionWithSel:(SEL)sel;
 
@@ -19,8 +20,6 @@
 - (id)initWithSel:(SEL)sel;
 
 - (void)execute;
-
-- (void)executeWithGlobalObject:(NSObject *)globalExecuteInObj;
 
 @property(nonatomic, readonly) SEL sel;
 @property(nonatomic, readonly, weak) NSObject *executeInObj;

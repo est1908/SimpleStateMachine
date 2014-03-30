@@ -13,5 +13,5 @@
 @property(weak, nonatomic) SMNode *from;
 @property(weak, nonatomic) SMNode *to;
 @property(strong, nonatomic) NSString *event;
-@property(strong, nonatomic) SMAction *action;
+@property(strong, nonatomic) id<SMActionProtocol> action;
 @end
