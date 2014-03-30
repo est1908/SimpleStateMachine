@@ -24,7 +24,7 @@
 		15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */; };
 		15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD661794FEE2000326D0 /* SMTransition.m */; };
 		15A6BD721794FFDE000326D0 /* SMStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */; };
-		A98C7A4146A38E5E50BBC6D8 /* SMCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */; };
+		A98C7CB96EA6861AAE4B6D75 /* SMCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A98C7BE5196724CD5FEB1008 /* SMCompositeAction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,9 +80,9 @@
 		15A6BD661794FEE2000326D0 /* SMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMTransition.m; path = ../SMStateMachine/SMTransition.m; sourceTree = "<group>"; };
 		15A6BD701794FFDE000326D0 /* SMStateMachineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineTests.h; sourceTree = SOURCE_ROOT; };
 		15A6BD711794FFDE000326D0 /* SMStateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineTests.m; sourceTree = SOURCE_ROOT; };
-		A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCompositeAction.m; sourceTree = "<group>"; };
-		A98C737A4CD6E9D022A5A325 /* SMCompositeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCompositeAction.h; sourceTree = "<group>"; };
-		A98C7D3EFCC1A9DF592C2A0C /* SMActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMActionProtocol.h; sourceTree = "<group>"; };
+		A98C763319A903C3F485C1D1 /* SMCompositeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMCompositeAction.h; path = ../SMStateMachine/SMCompositeAction.h; sourceTree = "<group>"; };
+		A98C77A94284852D3E350FF6 /* SMActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SMActionProtocol.h; path = ../SMStateMachine/SMActionProtocol.h; sourceTree = "<group>"; };
+		A98C7BE5196724CD5FEB1008 /* SMCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SMCompositeAction.m; path = ../SMStateMachine/SMCompositeAction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +180,9 @@
 				15A6BD641794FEE2000326D0 /* SMStateMachineExecuteContext.m */,
 				15A6BD651794FEE2000326D0 /* SMTransition.h */,
 				15A6BD661794FEE2000326D0 /* SMTransition.m */,
-				A98C7D3EFCC1A9DF592C2A0C /* SMActionProtocol.h */,
-				A98C702A03F7E17CB72A7CA7 /* SMCompositeAction.m */,
-				A98C737A4CD6E9D022A5A325 /* SMCompositeAction.h */,
+				A98C763319A903C3F485C1D1 /* SMCompositeAction.h */,
+				A98C7BE5196724CD5FEB1008 /* SMCompositeAction.m */,
+				A98C77A94284852D3E350FF6 /* SMActionProtocol.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -282,7 +282,7 @@
 				15A6BD6D1794FEE2000326D0 /* SMStateMachineAsync.m in Sources */,
 				15A6BD6E1794FEE2000326D0 /* SMStateMachineExecuteContext.m in Sources */,
 				15A6BD6F1794FEE2000326D0 /* SMTransition.m in Sources */,
-				A98C7A4146A38E5E50BBC6D8 /* SMCompositeAction.m in Sources */,
+				A98C7CB96EA6861AAE4B6D75 /* SMCompositeAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
