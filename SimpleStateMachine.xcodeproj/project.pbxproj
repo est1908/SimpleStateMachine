@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2064223B2124511F0042783E /* SimpleStateMachine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206422312124511F0042783E /* SimpleStateMachine.framework */; };
+		206422402124511F0042783E /* SimpleStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064223F2124511F0042783E /* SimpleStateMachineTests.m */; };
+		206422422124511F0042783E /* SimpleStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 206422342124511F0042783E /* SimpleStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642261212451CF0042783E /* SMStateMachineAsync.h in Headers */ = {isa = PBXBuildFile; fileRef = 2064224B212451CD0042783E /* SMStateMachineAsync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642262212451CF0042783E /* SMNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064224C212451CD0042783E /* SMNode.m */; };
+		20642263212451CF0042783E /* SMStateMachineAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064224D212451CD0042783E /* SMStateMachineAsync.m */; };
+		20642264212451CF0042783E /* SMStateMachineExecuteContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064224E212451CD0042783E /* SMStateMachineExecuteContext.m */; };
+		20642265212451CF0042783E /* SMCompositeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2064224F212451CD0042783E /* SMCompositeAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642266212451CF0042783E /* SMAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642250212451CD0042783E /* SMAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642267212451CF0042783E /* SMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642251212451CD0042783E /* SMAction.m */; };
+		20642268212451CF0042783E /* SMCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642252212451CE0042783E /* SMCompositeAction.m */; };
+		20642269212451CF0042783E /* SMMonitorNSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642253212451CE0042783E /* SMMonitorNSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2064226A212451CF0042783E /* SMState.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642254212451CE0042783E /* SMState.m */; };
+		2064226B212451CF0042783E /* SMState.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642255212451CE0042783E /* SMState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2064226C212451CF0042783E /* SMStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642256212451CE0042783E /* SMStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2064226D212451CF0042783E /* SMStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642257212451CE0042783E /* SMStateMachine.m */; };
+		2064226E212451CF0042783E /* SMStateMachineExecuteContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642258212451CE0042783E /* SMStateMachineExecuteContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2064226F212451CF0042783E /* SMDecision.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642259212451CE0042783E /* SMDecision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642270212451CF0042783E /* SMCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 2064225A212451CE0042783E /* SMCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642271212451CF0042783E /* SMDecision.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064225B212451CE0042783E /* SMDecision.m */; };
+		20642272212451CF0042783E /* SMMonitorNSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064225C212451CF0042783E /* SMMonitorNSLog.m */; };
+		20642273212451CF0042783E /* SMActionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2064225D212451CF0042783E /* SMActionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642274212451CF0042783E /* SMTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 2064225E212451CF0042783E /* SMTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642275212451CF0042783E /* SMTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2064225F212451CF0042783E /* SMTransition.m */; };
+		20642276212451CF0042783E /* SMNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 20642260212451CF0042783E /* SMNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20642278212452E80042783E /* SMStateMachineAsyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642277212452E80042783E /* SMStateMachineAsyncTests.m */; };
+		2064227A212454B20042783E /* SMStateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20642279212454B20042783E /* SMStateMachineTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2064223C2124511F0042783E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 206422282124511F0042783E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 206422302124511F0042783E;
+			remoteInfo = SimpleStateMachine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		206422312124511F0042783E /* SimpleStateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleStateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206422342124511F0042783E /* SimpleStateMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleStateMachine.h; sourceTree = "<group>"; };
+		206422352124511F0042783E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2064223A2124511F0042783E /* SimpleStateMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleStateMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2064223F2124511F0042783E /* SimpleStateMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleStateMachineTests.m; sourceTree = "<group>"; };
+		206422412124511F0042783E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2064224B212451CD0042783E /* SMStateMachineAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineAsync.h; sourceTree = "<group>"; };
+		2064224C212451CD0042783E /* SMNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMNode.m; sourceTree = "<group>"; };
+		2064224D212451CD0042783E /* SMStateMachineAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineAsync.m; sourceTree = "<group>"; };
+		2064224E212451CD0042783E /* SMStateMachineExecuteContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineExecuteContext.m; sourceTree = "<group>"; };
+		2064224F212451CD0042783E /* SMCompositeAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCompositeAction.h; sourceTree = "<group>"; };
+		20642250212451CD0042783E /* SMAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMAction.h; sourceTree = "<group>"; };
+		20642251212451CD0042783E /* SMAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMAction.m; sourceTree = "<group>"; };
+		20642252212451CE0042783E /* SMCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCompositeAction.m; sourceTree = "<group>"; };
+		20642253212451CE0042783E /* SMMonitorNSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMMonitorNSLog.h; sourceTree = "<group>"; };
+		20642254212451CE0042783E /* SMState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMState.m; sourceTree = "<group>"; };
+		20642255212451CE0042783E /* SMState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMState.h; sourceTree = "<group>"; };
+		20642256212451CE0042783E /* SMStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachine.h; sourceTree = "<group>"; };
+		20642257212451CE0042783E /* SMStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStateMachine.m; sourceTree = "<group>"; };
+		20642258212451CE0042783E /* SMStateMachineExecuteContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStateMachineExecuteContext.h; sourceTree = "<group>"; };
+		20642259212451CE0042783E /* SMDecision.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMDecision.h; sourceTree = "<group>"; };
+		2064225A212451CE0042783E /* SMCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCommon.h; sourceTree = "<group>"; };
+		2064225B212451CE0042783E /* SMDecision.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMDecision.m; sourceTree = "<group>"; };
+		2064225C212451CF0042783E /* SMMonitorNSLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMMonitorNSLog.m; sourceTree = "<group>"; };
+		2064225D212451CF0042783E /* SMActionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMActionProtocol.h; sourceTree = "<group>"; };
+		2064225E212451CF0042783E /* SMTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMTransition.h; sourceTree = "<group>"; };
+		2064225F212451CF0042783E /* SMTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMTransition.m; sourceTree = "<group>"; };
+		20642260212451CF0042783E /* SMNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNode.h; sourceTree = "<group>"; };
+		20642277212452E80042783E /* SMStateMachineAsyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineAsyncTests.m; sourceTree = "<group>"; };
+		20642279212454B20042783E /* SMStateMachineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMStateMachineTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2064222D2124511F0042783E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206422372124511F0042783E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2064223B2124511F0042783E /* SimpleStateMachine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		206422272124511F0042783E = {
+			isa = PBXGroup;
+			children = (
+				206422332124511F0042783E /* SimpleStateMachine */,
+				2064223E2124511F0042783E /* SimpleStateMachineTests */,
+				206422322124511F0042783E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		206422322124511F0042783E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				206422312124511F0042783E /* SimpleStateMachine.framework */,
+				2064223A2124511F0042783E /* SimpleStateMachineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		206422332124511F0042783E /* SimpleStateMachine */ = {
+			isa = PBXGroup;
+			children = (
+				206422342124511F0042783E /* SimpleStateMachine.h */,
+				20642250212451CD0042783E /* SMAction.h */,
+				20642251212451CD0042783E /* SMAction.m */,
+				2064225D212451CF0042783E /* SMActionProtocol.h */,
+				2064225A212451CE0042783E /* SMCommon.h */,
+				2064224F212451CD0042783E /* SMCompositeAction.h */,
+				20642252212451CE0042783E /* SMCompositeAction.m */,
+				20642259212451CE0042783E /* SMDecision.h */,
+				2064225B212451CE0042783E /* SMDecision.m */,
+				20642253212451CE0042783E /* SMMonitorNSLog.h */,
+				2064225C212451CF0042783E /* SMMonitorNSLog.m */,
+				20642260212451CF0042783E /* SMNode.h */,
+				2064224C212451CD0042783E /* SMNode.m */,
+				20642255212451CE0042783E /* SMState.h */,
+				20642254212451CE0042783E /* SMState.m */,
+				20642256212451CE0042783E /* SMStateMachine.h */,
+				20642257212451CE0042783E /* SMStateMachine.m */,
+				2064224B212451CD0042783E /* SMStateMachineAsync.h */,
+				2064224D212451CD0042783E /* SMStateMachineAsync.m */,
+				20642258212451CE0042783E /* SMStateMachineExecuteContext.h */,
+				2064224E212451CD0042783E /* SMStateMachineExecuteContext.m */,
+				2064225E212451CF0042783E /* SMTransition.h */,
+				2064225F212451CF0042783E /* SMTransition.m */,
+				206422352124511F0042783E /* Info.plist */,
+			);
+			name = SimpleStateMachine;
+			path = SMStateMachine;
+			sourceTree = "<group>";
+		};
+		2064223E2124511F0042783E /* SimpleStateMachineTests */ = {
+			isa = PBXGroup;
+			children = (
+				20642277212452E80042783E /* SMStateMachineAsyncTests.m */,
+				20642279212454B20042783E /* SMStateMachineTests.m */,
+				2064223F2124511F0042783E /* SimpleStateMachineTests.m */,
+				206422412124511F0042783E /* Info.plist */,
+			);
+			path = SimpleStateMachineTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2064222E2124511F0042783E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2064226B212451CF0042783E /* SMState.h in Headers */,
+				206422422124511F0042783E /* SimpleStateMachine.h in Headers */,
+				2064226E212451CF0042783E /* SMStateMachineExecuteContext.h in Headers */,
+				20642270212451CF0042783E /* SMCommon.h in Headers */,
+				2064226C212451CF0042783E /* SMStateMachine.h in Headers */,
+				2064226F212451CF0042783E /* SMDecision.h in Headers */,
+				20642261212451CF0042783E /* SMStateMachineAsync.h in Headers */,
+				20642266212451CF0042783E /* SMAction.h in Headers */,
+				20642269212451CF0042783E /* SMMonitorNSLog.h in Headers */,
+				20642273212451CF0042783E /* SMActionProtocol.h in Headers */,
+				20642276212451CF0042783E /* SMNode.h in Headers */,
+				20642265212451CF0042783E /* SMCompositeAction.h in Headers */,
+				20642274212451CF0042783E /* SMTransition.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		206422302124511F0042783E /* SimpleStateMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 206422452124511F0042783E /* Build configuration list for PBXNativeTarget "SimpleStateMachine" */;
+			buildPhases = (
+				2064222C2124511F0042783E /* Sources */,
+				2064222D2124511F0042783E /* Frameworks */,
+				2064222E2124511F0042783E /* Headers */,
+				2064222F2124511F0042783E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleStateMachine;
+			productName = SimpleStateMachine;
+			productReference = 206422312124511F0042783E /* SimpleStateMachine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		206422392124511F0042783E /* SimpleStateMachineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 206422482124511F0042783E /* Build configuration list for PBXNativeTarget "SimpleStateMachineTests" */;
+			buildPhases = (
+				206422362124511F0042783E /* Sources */,
+				206422372124511F0042783E /* Frameworks */,
+				206422382124511F0042783E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2064223D2124511F0042783E /* PBXTargetDependency */,
+			);
+			name = SimpleStateMachineTests;
+			productName = SimpleStateMachineTests;
+			productReference = 2064223A2124511F0042783E /* SimpleStateMachineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		206422282124511F0042783E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SM;
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					206422302124511F0042783E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					206422392124511F0042783E = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2064222B2124511F0042783E /* Build configuration list for PBXProject "SimpleStateMachine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 206422272124511F0042783E;
+			productRefGroup = 206422322124511F0042783E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				206422302124511F0042783E /* SimpleStateMachine */,
+				206422392124511F0042783E /* SimpleStateMachineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2064222F2124511F0042783E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206422382124511F0042783E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2064222C2124511F0042783E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20642263212451CF0042783E /* SMStateMachineAsync.m in Sources */,
+				20642268212451CF0042783E /* SMCompositeAction.m in Sources */,
+				20642262212451CF0042783E /* SMNode.m in Sources */,
+				2064226D212451CF0042783E /* SMStateMachine.m in Sources */,
+				2064226A212451CF0042783E /* SMState.m in Sources */,
+				20642272212451CF0042783E /* SMMonitorNSLog.m in Sources */,
+				20642275212451CF0042783E /* SMTransition.m in Sources */,
+				20642271212451CF0042783E /* SMDecision.m in Sources */,
+				20642264212451CF0042783E /* SMStateMachineExecuteContext.m in Sources */,
+				20642267212451CF0042783E /* SMAction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		206422362124511F0042783E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2064227A212454B20042783E /* SMStateMachineTests.m in Sources */,
+				20642278212452E80042783E /* SMStateMachineAsyncTests.m in Sources */,
+				206422402124511F0042783E /* SimpleStateMachineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2064223D2124511F0042783E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 206422302124511F0042783E /* SimpleStateMachine */;
+			targetProxy = 2064223C2124511F0042783E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		206422432124511F0042783E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		206422442124511F0042783E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		206422462124511F0042783E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6V98Q58M9U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SMStateMachine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsc.SimpleStateMachine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		206422472124511F0042783E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 6V98Q58M9U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SMStateMachine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsc.SimpleStateMachine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		206422492124511F0042783E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V98Q58M9U;
+				INFOPLIST_FILE = SimpleStateMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsc.SimpleStateMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2064224A2124511F0042783E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6V98Q58M9U;
+				INFOPLIST_FILE = SimpleStateMachineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dsc.SimpleStateMachineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2064222B2124511F0042783E /* Build configuration list for PBXProject "SimpleStateMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206422432124511F0042783E /* Debug */,
+				206422442124511F0042783E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		206422452124511F0042783E /* Build configuration list for PBXNativeTarget "SimpleStateMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206422462124511F0042783E /* Debug */,
+				206422472124511F0042783E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		206422482124511F0042783E /* Build configuration list for PBXNativeTarget "SimpleStateMachineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				206422492124511F0042783E /* Debug */,
+				2064224A2124511F0042783E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 206422282124511F0042783E /* Project object */;
+}
